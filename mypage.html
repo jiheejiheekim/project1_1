@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPage</title>
+    <style>
+        body {
+            background-image: url(img/ytbhome.jpg);
+            background-repeat: no-repeat;
+            
+        }
+        div {
+            flex-wrap : nowrap;
+            justify-content: center;
+            max-width: 1200px;
+        }
+        #picon {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
+        table {
+            border-collapse: collapse;  /*테이블 border 병합, 선이 한개가 됨*/
+            border: rgb(148, 147, 147) solid 0.5px;
+            background-color: white;
+        }
+        #tone {
+            position: absolute;
+            right: 80px;
+            top: 20px;
+            width: 265px;
+            display: none;
+        }
+        #ttwo {
+            position: absolute;
+            top: 20px;
+            right: 350px;
+            display: none;
+            width: 268px;
+        }
+        
+        td {
+            padding: 10px;
+        }
+        #tone tr:nth-child(4),#tone tr:nth-child(8),#tone tr:nth-child(11),#tone tr:nth-child(16), #tone tr:nth-child(17){
+            border-top: 0.5px rgb(148, 147, 147) solid;  /*td말고 tr에만 border설정 가능=>테이블 내부에는 세로줄X*/
+        }
+        img {
+            width: 35px;
+            height: 35px;
+        }
+        td:nth-child(1) {
+            width: 70px;
+        }
+        #user {
+            height: 70px;
+            width: 70px;
+        }
+        .bold {
+            font-size: 22px;
+        }
+        #blue {
+            color: blue;
+            font-size: 17px;
+        }
+        td {
+            font-size: 13px;
+        }
+        td>a {
+            text-decoration: none;
+            color: black;
+        }
+        #ic {
+            width: 30px;
+            height: 30px;
+        }
+        #hov:hover {
+            background-color: rgb(242, 241, 241);
+        }
+        #ttwo tr:nth-child(2), #ttwo tr:nth-child(3), #ttwo tr:nth-child(5) {
+            border-top: 0.5px rgb(148, 147, 147) solid;
+        }
+        .small {
+            font-size: 11px;
+        }
+    </style>
+    <script>
+        let obj;   
+        let obj2; 
+        let flag1 = 1;
+        let flag2 = 1;
+        
+        window.onload = function() {
+            obj = document.getElementById('tone');
+            obj2 = document.getElementById('ttwo');
+        }
+        function show() {
+            if(flag1==1) {
+                obj.style.display='block';
+                flag1-=1;    // 0 
+            } else {
+                obj.style.display='none';
+                flag1+=1;    // 1
+            }       
+        }
+        function show2() {
+            if(flag2==1) {
+                obj2.style.display='block';
+                flag2-=1;    // 0 
+            } else {
+                obj2.style.display='none';
+                flag2+=1;    // 1
+            }       
+        }
+        
+    </script>
+</head>
+<body>
+    <div>
+        <a id="picon" href="#" onclick="show()"><img src="img/1.png"></a>
+        <table id="tone">
+            <tr>
+                <td rowspan="3"><img id="user" src="img/1.png"></td>
+                <td class="bold" colspan="2">홍길동</td>
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <!-- <td></td> -->
+                <td colspan="2">@user</td>
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <!-- <td></td> -->
+                <td colspan="2"><a id="blue" href="./google1.html">google 계정관리</a></td>
+                <!-- <td></td> -->
+            </tr>
+            <tr id="hov">
+                <td><img id="ic" src="img/20.png"></td>
+                <td colspan="2"><a href="#">내 채널</a></td>
+                <!-- <td></td> -->
+            </tr>
+            <tr id="hov">
+                <td><img id="ic" src="img/2.png"></td>
+                <td colspan="2"><a href="#">Youtube 스튜디오</a></td>
+                <!-- <td></td> -->
+            </tr>
+            <tr id="hov">
+                <td><img id="ic" src="img/3.png"></td>
+                <td><a href="#" onclick="show2()">계정전환</a></td>
+                <td class="bold">></td>
+            </tr>
+            <tr id="hov">
+                <td><img id="ic" src="img/4.png"></td>
+                <td colspan="2"><a href="#">로그아웃</a></td>
+                <!-- <td></td> -->
+            </tr>
+            
+            <tr id="hov">
+                <td><img id="ic" src="img/5.png"></td>
+                <td colspan="2"><a href="#">내 Premium 혜택</a></td>
+                <!-- <td></td> -->
+            </tr>
+            <tr id="hov">
+                <td><img id="ic" src="img/6.png"></td>
+                <td colspan="2"><a href="#">구매 항목 및 멤버십</a></td>
+                <!-- <td></td> -->
+            </tr>
+            <tr id="hov">
+                <td><img id="ic" src="img/7.png"></td>
+                <td colspan="2"><a href="#">Youtube의 내 데이터</a></td>
+                <!-- <td></td> -->
+            </tr>
+            
+            <tr id="hov">
+                <td><img id="ic" src="img/8.png"></td>
+                <td><a href="#">디자인: 기기테마</a></td>
+                <td class="bold">></td>
+            </tr>
+            <tr id="hov">
+                <td><img id="ic" src="img/9.png"></td>
+                <td><a href="#">언어: 한국어</a></td>
+                <td class="bold">></td>
+            </tr>
+            <tr id="hov">
+                <td><img id="ic" src="img/18.png"></td>
+                <td><a href="#">제한 모드: 사용안함</a></td>
+                <td class="bold">></td>
+            </tr>
+            <tr id="hov">
+                <td><img id="ic" src="img/10.png"></td>
+                <td><a href="#">위치: 한국</a></td>
+                <td class="bold">></td>
+            </tr>
+            <tr id="hov">
+                <td><img id="ic" src="img/19.png"></td>
+                <td><a href="#">단축키</a></td>
+                <td class="bold">></td>
+            </tr>
+            <tr id="hov">
+                <td><img id="ic" src="img/11.png"></td>
+                <td colspan="2"><a href="#">설정</a></td>
+                <!-- <td></td> -->
+            </tr>
+
+            <tr id="hov">
+                <td><img id="ic" src="img/12.png"></td>
+                <td colspan="2"><a href="#">고객센터</a></td>
+                <!-- <td></td> -->
+            </tr>
+            <tr id="hov">
+                <td><img id="ic" src="img/13.png"></td>
+                <td colspan="2"><a href="#">의견보내기</a></td>
+                <!-- <td></td> -->
+            </tr>
+        </table>
+
+
+        <br><br>
+
+
+        <table id="ttwo">
+            <tr>
+                <td><a href=""><img src="img/14.png"></a></td>
+                <td colspan="2">계정</td>
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <td colspan="3"><a>홍길동<br>honggd@gmail.com</a></td>
+                <!-- <td></td>
+                <td></td> -->
+            </tr>
+            <tr id="hov">
+                <td class=""><img id="ic" src="img/1.png"></td>
+                <td>김지희<br><a class="small" href="#">@user<br>구독자 없음</a></td>
+                <td>　　　<img src="img/17.png"></td>
+            </tr>
+            <tr id="hov">
+                <td colspan="3"><a href="#">모든 채널 보기</a></td>
+                <!-- <td></td>
+                <td></td> -->
+            </tr>
+            <tr id="hov">
+                <td><img id="ic" src="img/15.png"></td>
+                <td colspan="2"><a href="#">계정 추가</a></td>
+                <!-- <td></td> -->
+            </tr>
+            <tr id="hov">
+                <td><img id="ic" src="img/16.png"></td>
+                <td colspan="2"><a href="#">로그아웃</a></td>
+                <!-- <td></td> -->
+            </tr>
+        </table>
+
+
+    </div>
+</body>
+</html>
