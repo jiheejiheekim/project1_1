@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member08.22</title>
+    <link rel="stylesheet" href="css/a2.css" type="text/css">
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td id="one" colspan="3">☞ 아이디(ID)정보</td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <td class="c" rowspan="2"> * 아이디</td>
+                <td><form action="go.jsp" method="post">
+                    <input type="text" name="userid">
+                    <button>중복검사</button>
+                    </td>
+                
+            </tr>
+            <tr>
+                <!-- <td></td> -->
+                <td class="small" colspan="2">(4~12자 영자/숫자 가능. 한글,특수문자 ID는 사용할 수 없습니다.)</td>
+                
+            </tr>
+            <tr>
+                <td class="c">* 비밀번호</td>
+                <td class="small">
+                    <input type="password" name="userpw">
+                    (4~8자 이내로 만들어 주세요)</form></td>
+                
+            </tr>
+            <tr>
+                <td class="c" >* 비밀번호 확인</td>
+                <td  class="small">
+                    <input type="password" name="userpw">
+                (위 번호와 같이 입력해 주세요)</td>
+            </tr>
+            <tr>
+                <td id="one" colspan="3">☞ 개인정보</td>
+            </tr>
+            <tr>
+                <td class="c" >* 이름(한글)</td>
+                <td class="small">
+                    <input type="text" name="username">
+                    (예 : 박정현)</td>
+            </tr>
+            <tr>
+                <td class="c" >생년월일</td>
+                <td><input type="date" name="birth" id="birth" min="2022-01-01" max="2023-10-31"><input type="radio"></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td class="c"  rowspan="2">* 주소</td>
+                <td><input type="text" name="address">
+                    <button>우편번호 찾기</button></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="address2"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="c" >* 전화번호</td>
+                <td><a id="purple">핸드폰 </a><input type="number" name="phone">
+                    <input type="radio" name="num">SKT
+                    <input type="radio" name="num">KT
+                    <input type="radio" name="num">LGT
+                </td>
+            </tr>
+            <tr>
+                <td class="c" >이메일</td>
+                <td colspan="2"><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td class="c" >가입인사</td>
+                <td colspan="2"><textarea rows="5" cols="50"></textarea></td>
+            </tr>
+        </table>
+        <div class="but">
+            <input type="submit" value="확인">
+            <input type="reset" value="다시입력">
+        </div>
+    </div>
+</form>
+</body>
+</html>
